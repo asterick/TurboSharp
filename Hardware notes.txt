@@ -1,0 +1,45 @@
+32kx16	VDC1			(SRAM interface)
+32kx16	VDC2			(SRAM interface)
+64kx8	CD-ROM ADPCM Memory	(SRAM interface)
+
+32x5x6	PSG			(internal bank)		# 1 bank
+512x9	VCE			(internal bank)		# 1 bank
+2kx8	CD-ROM BRAM		(internal bank)		# 4 banks
+
+64kx8	CD-ROM System		(SDRAM interface)
+64kx8	System Ram		(SDRAM interface)
+2048kx8	Arcade Card RAM		(SDRAM interface)	# Special banking
+256kx8	System Card ROM		(SDRAM interface)	or 	2560kB	Street Fighter Memory	(SDRAM interface)
+192kx8	CD-ROM System Card RAM	(SDRAM interface)
+
+
+
+128k x 16 SRAM				IS61LV25616AL-10TL (256k x 16)
+2M   x 8  SDRAM (minimum)		MT48LC8M8A2TG-75:G TR (8M x 8)
+512  x 8  SDRAM (minimum)
+
+3.3v 3 output DAC			ADV7125
+3.3v RGB -> NTSC encoder		AD723
+Cyclone 2 FPGA				EP2C8TI44C7
+PIC for SD and boot time control	PIC18F4550	
+Audio DAC				PCM1741
+
+[sd card port]
+[power regulators]
+[inductors/caps/resistors/diodes]
+
+
+
+85 I/O Pins
+
+SDRAM	- 28	(D0-D7 A0-A11 BA0-BA1 WE CAS RAS CS CLK CKE )
+SRAM	- 39	(D0-D7 A0-A17 CE OE WE)
+JOYPORT	- 6	(CLR SEL D0-D3)
+SD	- 3	(SCLK DI DO)
+
+AUDIO	- 3	(BCK LRCK DATA (SCK can probably by run through PLL))
+VIDEO	- 12 (rgb) + 3 (sync/blank/clock)
+
+
+
+12 + 3 + 6 + 28

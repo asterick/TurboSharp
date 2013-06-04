@@ -1,0 +1,6 @@
+VDC does not support CG modes
+
+CD-ROM doesn't read listen to commands
+ADPCM doesn't exist
+
+Arcade Card memory not emulated
